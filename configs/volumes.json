@@ -1,0 +1,49 @@
+{
+  "volumes": {
+    "L_fermi_velocity": {
+      "domain": "quantum_kinematic",
+      "pinch_slot": "electron_kinematic",
+      "enabled": true
+    },
+    "L_emission_nist": {
+      "domain": "quantum_transitional",
+      "pinch_slot": "vertex_emission",
+      "enabled": true
+    },
+    "L_igrf": {
+      "domain": "geomagnetic",
+      "pinch_slot": "planetary_harmonics",
+      "enabled": true
+    },
+    "s2_stellar_kinematics": {
+      "domain": "stellar_kinematic",
+      "pinch_slot": "stellar_kinematic",
+      "enabled": true
+    },
+    "b5_pdb_protein": {
+      "domain": "biology_backbone",
+      "pinch_slot": "biology_backbone",
+      "enabled": true
+    },
+    "p1_orbital_periods": {
+      "domain": "orbital",
+      "pinch_slot": "orbital_periods",
+      "enabled": true
+    },
+    "k2_pulsar_periods": {
+      "domain": "stellar_rotation",
+      "pinch_slot": "pulsar_periods",
+      "enabled": true
+    },
+	"q4_nuclear": {
+	  "domain": "nuclear_binding",
+	  "pinch_slot": "nuclear_binding",
+	  "enabled": true
+	},
+    "g1_galaxy_kinematics": {
+	  "domain": "galactic",
+	  "pinch_slot": "galactic_kinematic",
+	  "enabled": true
+	}
+  }
+}

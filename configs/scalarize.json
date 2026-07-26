@@ -1,0 +1,56 @@
+{
+  "L_fermi_velocity": {
+    "formula_type": "log_standard",
+    "data_field": "fermi_velocity_ms",
+    "natural_unit": "1 m/s",
+    "description": "log(1 + v_F) / log(16/pi)"
+  },
+  "L_emission_nist": {
+    "formula_type": "log_standard",
+    "data_field": "transition_frequency_Hz",
+    "natural_unit": "1 Hz",
+    "description": "log(1 + v_Hz) / log(16/pi)"
+  },
+  "L_igrf": {
+    "formula_type": "log_standard",
+    "data_field": "amplitude_nT",
+    "natural_unit": "1 nT",
+    "description": "log(1 + amplitude_nT) / log(16/pi)"
+  },
+  "s2_stellar_kinematics": {
+    "formula_type": "log_standard",
+    "data_field": "val_raw_kms",
+    "natural_unit": "km/s",
+    "description": "log(v_perp + 1) / log(16/pi)"
+  },
+  "b5_pdb_protein": {
+    "formula_type": "log_standard",
+    "data_field": "angle_degrees",
+    "natural_unit": "degrees",
+    "description": "log(|angle| + 1) / log(16/pi)"
+  },
+  "p1_orbital_periods": {
+    "formula_type": "log_standard",
+    "data_field": "period_days_raw",
+    "natural_unit": "days",
+    "description": "log(period_days + 1) / log(16/pi)"
+  },
+  "k2_pulsar_periods": {
+    "formula_type": "log_standard",
+    "data_field": "p0_ms",
+    "natural_unit": "ms",
+    "description": "log(p0_ms + 1) / log(16/pi)"
+  },
+  "q4_nuclear": {
+    "formula_type": "log_standard",
+    "data_field": "binding_energy_mev_per_A",
+    "natural_unit": "MeV/A",
+    "description": "log(binding_energy_mev_per_A + 1) / log(16/pi)"
+},
+  "g1_galaxy_kinematics": {
+    "formula_type": "log_standard",
+    "data_field": "scalar_kls",
+    "natural_unit": "pre_scalarized",
+    "description": "pre-scalarized sector-normalized vdisp; scalar_kls used directly"
+}
+}

@@ -1,0 +1,116 @@
+KishLattice Pipeline Run Log
+============================================================
+run_timestamp:   20260706_000750
+vol_root:        C:\Users\timot\Downloads\Science\src\The_Sister_Papers
+engine_version:  7ec3f687e97dbc53157f487b8d3c8028c78cb29cd07bf67abd2b4a5260366c03d5d1612f9caf57d6b0c21459cc7e1a582bf8bbb130a32607dec51771d0db37342556162df477b8cfd6768cf44ebe7dbaec5cc76ce4f3835fd5f8ef49e31f2837
+stages:          pinch
+started_utc:     2026-07-06 00:07:50 UTC
+============================================================
+
+
+============================================================
+[2026-07-06 00:07:50 UTC] STAGE: PINCH
+Compute z-scores and cross-domain pinch table
+============================================================
+[harmonic_targets.json] Loaded 23 registers (N=4 to N=26), container=24, threshold=0.05
+
+============================================================
+  [MONITORING TIP] Open a new terminal and run:
+  python engine/sidecar.py
+  to view the live parallel crunching dashboard.
+============================================================
+
+Loading unified master: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\unified_master.jsonl
+  Loading records into memory. Please wait...
+    -> Parsed 380,184 records...
+    -> Parsed 760,569 records...
+    -> Parsed 1,137,867 records...
+    -> Parsed 1,515,066 records...
+    -> Parsed 1,928,247 records...
+    -> Parsed 2,465,341 records...
+    -> Parsed 3,005,047 records...
+    -> Parsed 3,395,687 records...
+    -> Parsed 3,765,685 records...
+    -> Parsed 4,138,181 records...
+    -> Parsed 4,508,645 records...
+    -> Parsed 4,878,720 records...
+
+  Finished loading 4,927,648 total records.
+  Compressing to 32-bit Numpy Arrays for Memory-Safe IPC...
+
+Building pinch table in PARALLEL mode...
+
+  Loading Chaos Nulls into memory...
+  Finished loading Chaos Nulls.
+  Loading Synthetic Nulls into memory...
+  Finished loading Synthetic Nulls.
+Resuming from checkpoint: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\pinch_state.json
+Total Combinations: 690 | Remaining: 0
+
+Saved: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\pinch_table_cross_domain.json
+
+===================================================================================================================
+                                              CROSS-DOMAIN PINCH TABLE                                             
+Moduli: 4/pi=1.2732  5/pi=1.5915  6/pi=1.9099  7/pi=2.2282  8/pi=2.5465  9/pi=2.8648  10/pi=3.1831  11/pi=3.5014  12/pi=3.8197  13/pi=4.1380  14/pi=4.4563  15/pi=4.7746  16/pi=5.0930  17/pi=5.4113  18/pi=5.7296  19/pi=6.0479  20/pi=6.3662  21/pi=6.6845  22/pi=7.0028  23/pi=7.3211  24/pi=7.6394  25/pi=7.9577  26/pi=8.2761
+                                  dist_lock (1=perfect) | Winner + best chaos_delta per pairing                                   
+===================================================================================================================
+Domain                            biology_backbone                        galactic                        nuclear_binding                         orbital                        stellar_kinematic                    stellar_rotation          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+biology_backbone                         -                      (0.998,0.998,0.999) d+0.009         (0.978,0.925,0.917) d-0.001         (0.989,0.991,0.995) d+0.017         (0.464,0.510,0.546) d-0.107         (0.994,0.998,0.992) d+0.009     
+galactic                    (0.998,0.998,0.999) d+0.032                      -                      (0.978,0.923,0.917) d-0.001         (0.990,0.989,0.995) d+0.017         (0.464,0.510,0.546) d-0.108         (0.996,0.998,0.992) d+0.007     
+nuclear_binding             (0.978,0.925,0.917) d+0.022         (0.978,0.923,0.917) d+0.008                      -                      (0.971,0.930,0.918) d+0.037         (0.461,0.505,0.547) d-0.084         (0.976,0.925,0.911) d+0.008     
+orbital                     (0.989,0.991,0.995) d+0.031         (0.990,0.989,0.995) d+0.005         (0.971,0.930,0.918) d+0.013                      -                      (0.465,0.510,0.546) d-0.107         (0.992,0.989,0.989) d+0.011     
+stellar_kinematic           (0.464,0.510,0.546) d+0.000         (0.464,0.510,0.546) d+0.002         (0.461,0.505,0.547) d+0.006         (0.465,0.510,0.546) d+0.001                      -                      (0.464,0.510,0.546) d+0.001     
+stellar_rotation            (0.994,0.998,0.992) d+0.027         (0.996,0.998,0.992) d+0.010         (0.976,0.925,0.911) d-0.002         (0.992,0.989,0.989) d+0.013         (0.464,0.510,0.546) d-0.108                      -                  
+
+--- WINNER PER PAIRING ---
+  biology_backbone x galactic: 6/pi  score=0.9992  chaos_delta=+0.0010
+  biology_backbone x nuclear_binding: 4/pi  score=0.9783  chaos_delta=-0.0007
+  biology_backbone x orbital: 6/pi  score=0.9952  chaos_delta=-0.0030
+  biology_backbone x stellar_kinematic: 26/pi  score=0.7439  chaos_delta=-0.1072
+  biology_backbone x stellar_rotation: 5/pi  score=0.9975  chaos_delta=+0.0046
+  galactic x nuclear_binding: 4/pi  score=0.9776  chaos_delta=-0.0012
+  galactic x orbital: 6/pi  score=0.9951  chaos_delta=-0.0036
+  galactic x stellar_kinematic: 26/pi  score=0.7413  chaos_delta=-0.1078
+  galactic x stellar_rotation: 5/pi  score=0.9980  chaos_delta=+0.0068
+  nuclear_binding x orbital: 4/pi  score=0.9712  chaos_delta=-0.0066
+  nuclear_binding x stellar_kinematic: 23/pi  score=0.7290  chaos_delta=-0.0842
+  nuclear_binding x stellar_rotation: 4/pi  score=0.9760  chaos_delta=+0.0015
+  orbital x stellar_kinematic: 26/pi  score=0.7421  chaos_delta=-0.1070
+  orbital x stellar_rotation: 15/pi  score=0.9934  chaos_delta=+0.0020
+  stellar_kinematic x stellar_rotation: 26/pi  score=0.7413  chaos_delta=+0.0001
+
+--- PER-DOMAIN DUAL Z-SCORES (Chaos | Synthetic) ---
+  Domain                           4/pi       5/pi       6/pi       7/pi       8/pi       9/pi      10/pi      11/pi      12/pi      13/pi      14/pi      15/pi      16/pi      17/pi      18/pi      19/pi      20/pi      21/pi      22/pi      23/pi      24/pi      25/pi      26/pi   Best   Interpretation
+  -------------------------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------  ------  --------------------
+     1  nuclear_binding                        43  computing...  ETA: estimating...
+     1  nuclear_binding              43 |  0.2|1.1  -0.7|-0.2 -1.5|-0.6 -0.4|0.4   1.4|2.1  -1.2|-0.5 -0.7|0.0  -0.4|0.2  -1.7|-1.1  2.7|3.7  -2.0|-1.9  5.6|-0.2 -0.9|-0.6  0.8|1.4  -2.2|-1.4 -1.8|-1.2 -0.2|0.8   7.3|1.4  -1.5|-0.7 -1.5|-1.2 -1.2|-0.7  1.7|2.2   4.1|5.0   21/pi   STRONG signal
+     2  stellar_rotation                    2,527  computing...  ETA: 0s
+     2  stellar_rotation          2,527 | -0.5|0.1  -0.3|0.1   0.8|1.3  -1.1|-4.1 -2.5|-2.3 -1.1|-0.3  0.6|0.1  -0.3|0.3  -0.0|0.6   0.8|1.2   0.9|-2.1 -0.5|-0.2 -2.7|-2.2 -0.3|-0.2  1.0|1.5  -1.2|-1.3 -1.0|-1.6  0.4|1.0   0.6|1.1  -0.1|0.2   0.2|1.2  -1.3|-0.6 -1.2|-0.9  18/pi   noise floor
+     3  orbital                            13,514  computing...  ETA: 0s
+     3  orbital                  13,514 | -3.2|-3.2  7.0|7.8  -3.4|-3.5  1.4|2.2   1.7|2.3  -3.3|-3.3 17.8|16.6 18.9|20.2 -16.1|-13.8 -9.6|-9.2 -2.9|-2.2  6.8|7.5   5.2|5.6  -10.4|-10.7 -12.8|-14.7 -11.4|-10.6 -2.8|-1.9 -14.9|-15.1 32.2|30.7 -9.9|-11.5 -10.7|-11.2 -4.0|-5.7 -13.6|-15.3  22/pi   STRONG signal
+     4  biology_backbone                1,259,889  computing...  ETA: 1s
+     4  biology_backbone       1,259,889 | -6.0|30.8 -3.7|40.8 -6.1|31.7 -15.5|24.7  2.8|44.6 -0.3|38.1 -17.1|17.4 -26.3|12.2 23.4|60.1  9.8|42.5  5.8|38.3 37.0|66.4 55.7|-205.7 -37.4|-8.2 -6.3|26.0 41.2|82.1 -46.4|-306.2 12.9|39.1 -6.9|26.3 -28.4|-6.0 39.0|-209.9 53.6|79.6 -22.4|-2.0  16/pi   STRONG signal
+     5  stellar_kinematic               1,808,145  computing...  ETA: 41s
+     5  stellar_kinematic      1,808,145 | -15.5|49.5  0.7|53.2 -10.9|51.2 -72.0|-16.5 -24.0|37.2 -81.5|-14.5 -92.4|-30.1 -55.6|7.6  96.2|143.0 -41.9|21.5 -74.2|-6.8 93.7|164.4 110.4|141.9 -12.5|48.2 -41.2|25.7 -55.5|8.0  -57.7|-1.3 -62.9|-19.9 -89.1|-17.0 -79.6|-19.9 -77.4|-44.6 -86.4|-36.5 -87.4|-40.4  16/pi   STRONG signal
+     6  galactic                        1,843,110  computing...  ETA: 40s
+     6  galactic               1,843,110 | -2.1|0.9   1.6|0.5  -9.5|7.5  11.4|-0.9 -12.4|3.9   9.5|14.9 -20.6|-1.8 -20.2|-0.7 -9.8|8.8  -7.7|1.4   4.9|-32.8 39.7|-4.2 15.9|4.8  -19.8|-4.8 -11.8|28.1  7.7|2.9  -12.7|2.8  61.9|15.1 -69.1|-14.5 36.5|32.0 -32.2|-27.4  7.0|45.4 -37.6|-1.0  21/pi   STRONG signal
+
+  Z-score stage complete: 5m 22s total  | avg 53.68s per domain  | 322.1s wall time
+
+  [z_scores_master.json written -> C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\z_scores_master.json]
+
+[2026-07-06 00:14:13 UTC] STAGE COMPLETE: pinch in 6m 23s
+
+============================================================
+[2026-07-06 00:14:13 UTC] PIPELINE COMPLETE
+  Total runtime: 6m 23s
+  Log file:      lakes\logs\run_20260706_000750.log
+
+  Stage summary:
+    [OK]   pinch        6m 23s
+
+  Engine fingerprint: 7ec3f687e97dbc53157f487b8d3c8028c78cb29cd07bf67abd2b4a5260366c03
+                      d5d1612f9caf57d6b0c21459cc7e1a582bf8bbb130a32607dec51771d0db3734
+                      2556162df477b8cfd6768cf44ebe7dbaec5cc76ce4f3835fd5f8ef49e31f2837
+============================================================

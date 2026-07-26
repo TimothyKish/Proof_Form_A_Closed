@@ -1,0 +1,64 @@
+{
+  "runs": 20,
+  "anchors": {
+    "stellar_kinematic": {
+      "anchor_N": 16,
+      "mean": 96.34517609401294,
+      "std": 8.42502335247675,
+      "min": 80.30076307927887,
+      "max": 110.41088952169552,
+      "anchor_peak_fraction": 0.65,
+      "most_frequent_peak_N": 16,
+      "most_frequent_peak_fraction": 0.65,
+      "aligned": true,
+      "peak_distribution": {
+        "16": 13,
+        "15": 6,
+        "12": 1
+      }
+    },
+    "biology_backbone": {
+      "anchor_N": 25,
+      "mean": 52.94098913676171,
+      "std": 4.034224201094168,
+      "min": 46.47111909349467,
+      "max": 59.85281330232374,
+      "anchor_peak_fraction": 0.3,
+      "most_frequent_peak_N": 16,
+      "most_frequent_peak_fraction": 0.7,
+      "aligned": false,
+      "peak_distribution": {
+        "16": 14,
+        "25": 6
+      }
+    },
+    "galactic": {
+      "anchor_N": 21,
+      "mean": 57.061694041337965,
+      "std": 3.2119155789253213,
+      "min": 52.155693730759786,
+      "max": 62.12409154490569,
+      "anchor_peak_fraction": 1.0,
+      "most_frequent_peak_N": 21,
+      "most_frequent_peak_fraction": 1.0,
+      "aligned": true,
+      "peak_distribution": {
+        "21": 20
+      }
+    },
+    "nuclear_binding": {
+      "anchor_N": 21,
+      "mean": 7.4433160182664295,
+      "std": 0.7090143454661492,
+      "min": 6.521550235468417,
+      "max": 9.31677056748559,
+      "anchor_peak_fraction": 1.0,
+      "most_frequent_peak_N": 21,
+      "most_frequent_peak_fraction": 1.0,
+      "aligned": true,
+      "peak_distribution": {
+        "21": 20
+      }
+    }
+  }
+}

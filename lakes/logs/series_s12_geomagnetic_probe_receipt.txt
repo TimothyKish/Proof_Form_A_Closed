@@ -1,0 +1,2 @@
+VALIDATED: s12_geomagnetic_probe
+STATUS: READY FOR UNIFY

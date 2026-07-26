@@ -1,0 +1,118 @@
+[
+  {
+    "path": "lakes/inputs_promoted/b4_pdb_protein_promoted.jsonl",
+    "size_mb": 1273.55
+  },
+  {
+    "path": "lakes/inputs_promoted/b5_pdb_full_protein_promoted.jsonl",
+    "size_mb": 3349.5
+  },
+  {
+    "path": "lakes/inputs_promoted/b5_pdb_protein_promoted.jsonl",
+    "size_mb": 596.97
+  },
+  {
+    "path": "lakes/inputs_promoted/g1_galaxy_kinematics_promoted.jsonl",
+    "size_mb": 1563.17
+  },
+  {
+    "path": "lakes/inputs_promoted/nist_asd_promoted.jsonl",
+    "size_mb": 127.66
+  },
+  {
+    "path": "lakes/inputs_promoted/p4_ttv_promoted.jsonl",
+    "size_mb": 107.64
+  },
+  {
+    "path": "lakes/inputs_promoted/s2_stellar_kinematics_promoted.jsonl",
+    "size_mb": 1702.31
+  },
+  {
+    "path": "lakes/synthetic/chaos_null_biology_backbone.jsonl",
+    "size_mb": 859.79
+  },
+  {
+    "path": "lakes/synthetic/chaos_null_galactic.jsonl",
+    "size_mb": 1196.87
+  },
+  {
+    "path": "lakes/synthetic/chaos_null_stellar_kinematic.jsonl",
+    "size_mb": 1242.53
+  },
+  {
+    "path": "lakes/synthetic/scramble_null_biology_backbone.jsonl",
+    "size_mb": 814.64
+  },
+  {
+    "path": "lakes/synthetic/scramble_null_galactic.jsonl",
+    "size_mb": 1135.5
+  },
+  {
+    "path": "lakes/synthetic/scramble_null_stellar_kinematic.jsonl",
+    "size_mb": 1178.65
+  },
+  {
+    "path": "lakes/synthetic/synthetic_null_biology_backbone.jsonl",
+    "size_mb": 969.59
+  },
+  {
+    "path": "lakes/synthetic/synthetic_null_galactic.jsonl",
+    "size_mb": 1362.24
+  },
+  {
+    "path": "lakes/synthetic/synthetic_null_stellar_kinematic.jsonl",
+    "size_mb": 1402.7
+  },
+  {
+    "path": "lakes/unified/b4_pdb_protein_promoted.jsonl",
+    "size_mb": 1273.55
+  },
+  {
+    "path": "lakes/unified/b5_pdb_full_protein_promoted.jsonl",
+    "size_mb": 3349.5
+  },
+  {
+    "path": "lakes/unified/b5_pdb_protein_promoted.jsonl",
+    "size_mb": 596.97
+  },
+  {
+    "path": "lakes/unified/b5_pdb_protein_scalarized.jsonl",
+    "size_mb": 640.19
+  },
+  {
+    "path": "lakes/unified/g1_galaxy_kinematics_promoted.jsonl",
+    "size_mb": 1563.17
+  },
+  {
+    "path": "lakes/unified/g1_galaxy_kinematics_scalarized.jsonl",
+    "size_mb": 1518.6
+  },
+  {
+    "path": "lakes/unified/nist_asd_promoted.jsonl",
+    "size_mb": 127.66
+  },
+  {
+    "path": "lakes/unified/p4_ttv_promoted.jsonl",
+    "size_mb": 107.64
+  },
+  {
+    "path": "lakes/unified/s2_stellar_kinematics_promoted.jsonl",
+    "size_mb": 1702.31
+  },
+  {
+    "path": "lakes/unified/s2_stellar_kinematics_scalarized.jsonl",
+    "size_mb": 1686.79
+  },
+  {
+    "path": "lakes/unified/unified_master.jsonl",
+    "size_mb": 3857.28
+  },
+  {
+    "path": "series/s14_geometric_electron/lake/promoted/nist_asd_promoted.jsonl",
+    "size_mb": 127.66
+  },
+  {
+    "path": "series/s14_geometric_electron/lake/raw/nist_asd_emission_Z1_to_Z18.jsonl",
+    "size_mb": 111.29
+  }
+]

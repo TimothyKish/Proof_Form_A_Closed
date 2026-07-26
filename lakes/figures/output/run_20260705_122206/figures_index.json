@@ -1,0 +1,157 @@
+{
+  "run_timestamp": "20260705_122206",
+  "generated_utc": "2026-07-05 12:23:43 UTC",
+  "total_files": 12,
+  "total_elapsed_s": 97.34,
+  "z_score_patches": 0,
+  "plugins": [
+    {
+      "plugin": "report_01_domain_Ramachandran_scatters",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\scatter_biology_backbone_full.png",
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\scatter_orbital_ttv.png"
+      ],
+      "elapsed": 26.916994094848633
+    },
+    {
+      "plugin": "report_02_bridge_map",
+      "status": "ok",
+      "files": [],
+      "elapsed": 0.24328923225402832
+    },
+    {
+      "plugin": "report_02_universal_histograms",
+      "status": "ok",
+      "files": [],
+      "elapsed": 13.75967526435852
+    },
+    {
+      "plugin": "report_03_power_analysis",
+      "status": "ok",
+      "files": [],
+      "elapsed": 0.0011990070343017578
+    },
+    {
+      "plugin": "report_04_batch_stability",
+      "status": "ok",
+      "files": [],
+      "elapsed": 0.0006384849548339844
+    },
+    {
+      "plugin": "report_05_wrongbox_delta",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\wrongbox_delta_stellar_rotation.png",
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\wrongbox_delta_stellar_kinematic.png",
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\wrongbox_delta_biology_backbone.png"
+      ],
+      "elapsed": 0.5994946956634521
+    },
+    {
+      "plugin": "report_06_register_spectrum",
+      "status": "ok",
+      "files": [],
+      "elapsed": 0.0010673999786376953
+    },
+    {
+      "plugin": "report_08_subnuclear_dual",
+      "status": "ok",
+      "files": [],
+      "elapsed": 14.421478748321533
+    },
+    {
+      "plugin": "report_09_floor_smear",
+      "status": "ok",
+      "files": [],
+      "elapsed": 17.631325721740723
+    },
+    {
+      "plugin": "report_10_kinematic_principle",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\principle_stellar_proof.png",
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\principle_orbital_proof.png"
+      ],
+      "elapsed": 0.5558774471282959
+    },
+    {
+      "plugin": "report_11_seismic_sovereign",
+      "status": "ok",
+      "files": [],
+      "elapsed": 14.075230836868286
+    },
+    {
+      "plugin": "report_12_pinch_heatmap",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\distance_matrix_heatmap.png"
+      ],
+      "elapsed": 0.6043674945831299
+    },
+    {
+      "plugin": "report_13_null_confidence",
+      "status": "ok",
+      "files": [],
+      "elapsed": 4.397918701171875
+    },
+    {
+      "plugin": "report_14_register_taxonomy",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\register_taxonomy_matrix.png"
+      ],
+      "elapsed": 0.2798008918762207
+    },
+    {
+      "plugin": "report_16_artifact_falsification",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\artifact_falsification.png"
+      ],
+      "elapsed": 0.24753308296203613
+    },
+    {
+      "plugin": "report_17_cross_scale_bridge",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\cross_scale_bridge.png"
+      ],
+      "elapsed": 0.4228837490081787
+    },
+    {
+      "plugin": "report_18_manifold_embedding",
+      "status": "ok",
+      "files": [],
+      "elapsed": 2.6796319484710693
+    },
+    {
+      "plugin": "report_19_same_object_phase_scatter",
+      "status": "ok",
+      "files": [],
+      "elapsed": 0.00984644889831543
+    },
+    {
+      "plugin": "report_20_global_ledger",
+      "status": "ok",
+      "files": [
+        "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\global_ledger_master.png"
+      ],
+      "elapsed": 0.46233153343200684
+    }
+  ],
+  "files": [
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\scatter_biology_backbone_full.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\scatter_orbital_ttv.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\wrongbox_delta_stellar_rotation.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\wrongbox_delta_stellar_kinematic.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\wrongbox_delta_biology_backbone.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\principle_stellar_proof.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\principle_orbital_proof.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\distance_matrix_heatmap.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\register_taxonomy_matrix.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\artifact_falsification.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\cross_scale_bridge.png",
+    "C:\\Users\\timot\\Downloads\\Science\\src\\The_Sister_Papers\\lakes\\figures\\output\\run_20260705_122206\\global_ledger_master.png"
+  ]
+}

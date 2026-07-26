@@ -1,0 +1,484 @@
+KishLattice Pipeline Run Log
+============================================================
+run_timestamp:   20260705_114658
+vol_root:        C:\Users\timot\Downloads\Science\src\The_Sister_Papers
+engine_version:  7ec3f687e97dbc53157f487b8d3c8028c78cb29cd07bf67abd2b4a5260366c03d5d1612f9caf57d6b0c21459cc7e1a582bf8bbb130a32607dec51771d0db3734e3979eb5bdb6dcea5694dbc4ed49d3209358f0a9931bd88a9d79849a523d4a82
+stages:          scalarize, unify, chaos, pinch, figures
+started_utc:     2026-07-05 11:47:08 UTC
+============================================================
+
+
+============================================================
+[2026-07-05 11:47:08 UTC] STAGE: SCALARIZE
+Transform promoted lakes into scalar space
+============================================================
+[scalarize.json] Loaded config for 0 domains.
+
+============================================================
+  [MONITORING TIP] Open a new terminal and run:
+  python engine/sidecar.py
+  to view the live byte-streaming progress dashboard.
+============================================================
+
+Scalarizing L_fermi_velocity: L_fermi_velocity_promoted.jsonl -> L_fermi_velocity_scalarized.jsonl (mode=geometry)
+Scalarizing L_igrf: L_igrf_promoted.jsonl -> L_igrf_scalarized.jsonl (mode=geometry)
+Scalarizing s2_stellar_kinematics: s2_stellar_kinematics_promoted.jsonl -> s2_stellar_kinematics_scalarized.jsonl (mode=geometry)
+Scalarizing b5_pdb_protein: b5_pdb_protein_promoted.jsonl -> b5_pdb_protein_scalarized.jsonl (mode=geometry)
+Scalarizing p1_orbital_periods: p1_orbital_periods_promoted.jsonl -> p1_orbital_periods_scalarized.jsonl (mode=geometry)
+Scalarizing k2_pulsar_periods: k2_pulsar_periods_promoted.jsonl -> k2_pulsar_periods_scalarized.jsonl (mode=geometry)
+
+[2026-07-05 11:47:43 UTC] STAGE COMPLETE: scalarize in 34s
+
+============================================================
+[2026-07-05 11:47:43 UTC] STAGE: UNIFY
+Stream all scalarized lakes into unified master
+============================================================
+C:\Users\timot\Downloads\Science\src\The_Sister_Papers\engine\unify.py:94: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+C:\Users\timot\Downloads\Science\src\The_Sister_Papers\engine\unify.py:168: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+
+============================================================
+  [MONITORING TIP] Open a new terminal and run:
+  python engine/sidecar.py
+  to view the live unified streaming dashboard.
+============================================================
+
+Volumes: 7 total, 7 enabled, 0 disabled
+
+[2026-07-05 11:47:43 UTC] Pipeline run started.
+
+  [L_fermi_velocity] domain=quantum_kinematic  n=21  nonzero=0
+  [SKIP] L_emission_nist � scalarized file not found
+  [L_igrf] domain=geomagnetic  n=195  nonzero=0
+    [2026-07-05 11:47:46 UTC] 250,000 records streamed from s2_stellar_kinematics...
+    [2026-07-05 11:47:49 UTC] 500,000 records streamed from s2_stellar_kinematics...
+    [2026-07-05 11:47:52 UTC] 750,000 records streamed from s2_stellar_kinematics...
+    [2026-07-05 11:47:56 UTC] 1,000,000 records streamed from s2_stellar_kinematics...
+    [2026-07-05 11:47:59 UTC] 1,250,000 records streamed from s2_stellar_kinematics...
+    [2026-07-05 11:48:02 UTC] 1,500,000 records streamed from s2_stellar_kinematics...
+    [2026-07-05 11:48:05 UTC] 1,750,000 records streamed from s2_stellar_kinematics...
+  [s2_stellar_kinematics] domain=stellar_kinematic  n=1,808,145  nonzero=1,808,145
+    [2026-07-05 11:48:08 UTC] 250,000 records streamed from b5_pdb_protein...
+    [2026-07-05 11:48:11 UTC] 500,000 records streamed from b5_pdb_protein...
+    [2026-07-05 11:48:13 UTC] 750,000 records streamed from b5_pdb_protein...
+    [2026-07-05 11:48:15 UTC] 1,000,000 records streamed from b5_pdb_protein...
+    [2026-07-05 11:48:17 UTC] 1,250,000 records streamed from b5_pdb_protein...
+C:\Users\timot\Downloads\Science\src\The_Sister_Papers\engine\unify.py:179: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+  [b5_pdb_protein] domain=biology_backbone  n=1,260,086  nonzero=1,259,889
+  [p1_orbital_periods] domain=orbital  n=13,521  nonzero=13,514
+  [k2_pulsar_periods] domain=stellar_rotation  n=2,527  nonzero=2,527
+
+[2026-07-05 11:48:17 UTC] Run complete.
+  Total runtime:   0h 0m 34s
+  Total records:   3,084,495
+  Lakes processed: 7
+  Throughput:      89,053 records/sec (average)
+  Master checksum: 1814cbc21b3bcef18fc30ae13d118e62
+  Checksum saved:  C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\unified_master.jsonl.md5
+
+Unified master written: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\unified_master.jsonl
+Sweep results written:  C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\sweep_results.json
+Pinch table written:    C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\pinch_table.json
+
+Domain summary:
+  Domain                          n    nonzero     mean range
+  -----------------------------------------------------------------
+  biology_backbone        1,260,086  1,259,889   2.5963 [0.0585, 3.1935]
+  geomagnetic                   195          (all zeros)
+  orbital                    13,521     13,514   3.8784 [0.0533, 6.9128]
+  quantum_kinematic              21          (all zeros)
+  stellar_kinematic       1,808,145  1,808,145   1.0930 [-0.1935, 4.4446]
+  stellar_rotation            2,527      2,527   3.5440 [0.5368, 5.7591]
+
+[2026-07-05 11:48:17 UTC] STAGE COMPLETE: unify in 34s
+
+[2026-07-05 11:48:17 UTC] CHECKSUM: computing MD5 of unified_master.jsonl
+  Checksum:      f2c84c11de5b6c7b71d282bdd3d60ee7
+  Bytes:         2,452,269,388
+  Computed in:   2s
+  Written to:    lakes\unified\unified_master.jsonl.md5
+
+============================================================
+[2026-07-05 11:48:20 UTC] STAGE: CHAOS
+Build chaos null distributions per domain
+============================================================
+[harmonic_targets.json] Loaded 23 registers (N=4 to N=26), container=24, threshold=0.05
+
+============================================================
+  [MONITORING TIP] Open a new terminal and run:
+  python engine/sidecar.py
+  to view the live null generation dashboard.
+============================================================
+
+NOTE: This job builds null distributions for all domains.
+      Runtime: Dependent on lake sizes. Do not interrupt.
+
+k_geo = 16/pi = 5.0929581789
+Volume number: 11
+Registers (23): 4/pi=1.273240  5/pi=1.591549  6/pi=1.909859  7/pi=2.228169  8/pi=2.546479  9/pi=2.864789  10/pi=3.183099  11/pi=3.501409  12/pi=3.819719  13/pi=4.138029  14/pi=4.456338  15/pi=4.774648  16/pi=5.092958  17/pi=5.411268  18/pi=5.729578  19/pi=6.047888  20/pi=6.366198  21/pi=6.684508  22/pi=7.002817  23/pi=7.321127  24/pi=7.639437  25/pi=7.957747  26/pi=8.276057
+
+Loading unified master...
+
+Found 6 domain slots:
+  biology_backbone             n=1259889  mean=2.5963  range=[0.0585, 3.1935]
+  geomagnetic                  n=   195  (all zeros)
+  orbital                      n= 13514  mean=3.8784  range=[0.0533, 6.9128]
+  quantum_kinematic            n=    21  (all zeros)
+  stellar_kinematic            n=1808145  mean=1.0930  range=[-0.1935, 4.4446]
+  stellar_rotation             n=  2527  mean=3.5440  range=[0.5368, 5.7591]
+
+Building null lakes...
+
+[biology_backbone]  n=1259889
+  4/pi: real=0.0983  chaos=0.0998  synth=0.0909  delta=-0.0015
+  5/pi: real=0.1006  chaos=0.1013  synth=0.0913  delta=-0.0007
+  6/pi: real=0.0999  chaos=0.1017  synth=0.0916  delta=-0.0018
+  7/pi: real=0.0970  chaos=0.1003  synth=0.0911  delta=-0.0033
+  8/pi: real=0.1022  chaos=0.1017  synth=0.0916  delta=+0.0005
+  9/pi: real=0.0989  chaos=0.0991  synth=0.0895  delta=-0.0001
+  10/pi: real=0.0966  chaos=0.1013  synth=0.0921  delta=-0.0047
+  11/pi: real=0.0911  chaos=0.0975  synth=0.0878  delta=-0.0064
+  12/pi: real=0.1074  chaos=0.1015  synth=0.0927  delta=+0.0059 ** above chaos **
+  13/pi: real=0.1014  chaos=0.0990  synth=0.0904  delta=+0.0025
+  14/pi: real=0.1023  chaos=0.1003  synth=0.0923  delta=+0.0020
+  15/pi: real=0.1116  chaos=0.1014  synth=0.0932  delta=+0.0102 ** above chaos **
+  16/pi: real=0.1164  chaos=0.1015  synth=0.1902  delta=+0.0149 ** above chaos **
+  17/pi: real=0.0908  chaos=0.1005  synth=0.0926  delta=-0.0097
+  18/pi: real=0.0974  chaos=0.0991  synth=0.0915  delta=-0.0017
+  19/pi: real=0.1075  chaos=0.0968  synth=0.0889  delta=+0.0107 ** above chaos **
+  20/pi: real=0.0891  chaos=0.1005  synth=0.1904  delta=-0.0114
+  21/pi: real=0.1016  chaos=0.0976  synth=0.0907  delta=+0.0040
+  22/pi: real=0.0916  chaos=0.0930  synth=0.0848  delta=-0.0014
+  23/pi: real=0.0896  chaos=0.0973  synth=0.0908  delta=-0.0078
+  24/pi: real=0.1109  chaos=0.0995  synth=0.1899  delta=+0.0114 ** above chaos **
+  25/pi: real=0.1093  chaos=0.0951  synth=0.0891  delta=+0.0142 ** above chaos **
+  26/pi: real=0.0929  chaos=0.0993  synth=0.0938  delta=-0.0064
+  -> chaos_null_biology_backbone.jsonl
+  -> scramble_null_biology_backbone.jsonl
+  -> synthetic_null_biology_backbone.jsonl
+
+[SKIP] geomagnetic -- all zeros
+[orbital]  n=13514
+  4/pi: real=0.0916  chaos=0.0981  synth=0.1013  delta=-0.0065
+  5/pi: real=0.1173  chaos=0.0991  synth=0.0954  delta=+0.0182 ** above chaos **
+  6/pi: real=0.0902  chaos=0.0924  synth=0.0987  delta=-0.0022
+  7/pi: real=0.1040  chaos=0.1015  synth=0.0980  delta=+0.0025
+  8/pi: real=0.1050  chaos=0.1004  synth=0.0963  delta=+0.0046
+  9/pi: real=0.0906  chaos=0.0979  synth=0.0988  delta=-0.0073
+  10/pi: real=0.1444  chaos=0.0993  synth=0.1004  delta=+0.0451 ** above chaos **
+  11/pi: real=0.1491  chaos=0.0991  synth=0.0990  delta=+0.0500 ** above chaos **
+  12/pi: real=0.0620  chaos=0.0952  synth=0.0975  delta=-0.0332
+  13/pi: real=0.0753  chaos=0.0997  synth=0.0961  delta=-0.0243
+  14/pi: real=0.0936  chaos=0.1000  synth=0.0983  delta=-0.0064
+  15/pi: real=0.1168  chaos=0.0971  synth=0.0961  delta=+0.0197 ** above chaos **
+  16/pi: real=0.1121  chaos=0.0998  synth=0.0989  delta=+0.0123 ** above chaos **
+  17/pi: real=0.0725  chaos=0.0932  synth=0.0940  delta=-0.0206
+  18/pi: real=0.0704  chaos=0.0923  synth=0.1084  delta=-0.0220
+  19/pi: real=0.0691  chaos=0.0995  synth=0.1002  delta=-0.0304
+  20/pi: real=0.0936  chaos=0.1019  synth=0.0958  delta=-0.0083
+  21/pi: real=0.0578  chaos=0.0985  synth=0.0997  delta=-0.0407
+  22/pi: real=0.1764  chaos=0.0993  synth=0.0966  delta=+0.0771 ** above chaos **
+  23/pi: real=0.0724  chaos=0.0948  synth=0.1019  delta=-0.0223
+  24/pi: real=0.0706  chaos=0.0924  synth=0.0967  delta=-0.0218
+  25/pi: real=0.0858  chaos=0.0991  synth=0.0969  delta=-0.0132
+  26/pi: real=0.0658  chaos=0.0954  synth=0.1113  delta=-0.0296
+  -> chaos_null_orbital.jsonl
+  -> scramble_null_orbital.jsonl
+  -> synthetic_null_orbital.jsonl
+
+[SKIP] quantum_kinematic -- all zeros
+[stellar_kinematic]  n=1808145
+  4/pi: real=0.0915  chaos=0.0948  synth=0.0818  delta=-0.0033
+  5/pi: real=0.0955  chaos=0.0956  synth=0.0842  delta=-0.0000
+  6/pi: real=0.0920  chaos=0.0941  synth=0.0813  delta=-0.0021
+  7/pi: real=0.0776  chaos=0.0938  synth=0.0815  delta=-0.0162
+  8/pi: real=0.0885  chaos=0.0938  synth=0.0810  delta=-0.0053
+  9/pi: real=0.0778  chaos=0.0947  synth=0.0809  delta=-0.0169
+  10/pi: real=0.0744  chaos=0.0945  synth=0.0811  delta=-0.0201
+  11/pi: real=0.0822  chaos=0.0943  synth=0.0805  delta=-0.0121
+  12/pi: real=0.1104  chaos=0.0923  synth=0.0804  delta=+0.0181 ** above chaos **
+  13/pi: real=0.0844  chaos=0.0928  synth=0.0805  delta=-0.0084
+  14/pi: real=0.0788  chaos=0.0918  synth=0.0805  delta=-0.0130
+  15/pi: real=0.1139  chaos=0.0943  synth=0.0804  delta=+0.0197 ** above chaos **
+  16/pi: real=0.1116  chaos=0.0913  synth=0.0796  delta=+0.0203 ** above chaos **
+  17/pi: real=0.0899  chaos=0.0924  synth=0.0794  delta=-0.0025
+  18/pi: real=0.0845  chaos=0.0924  synth=0.0797  delta=-0.0078
+  19/pi: real=0.0812  chaos=0.0920  synth=0.0794  delta=-0.0109
+  20/pi: real=0.0790  chaos=0.0916  synth=0.0793  delta=-0.0126
+  21/pi: real=0.0768  chaos=0.0903  synth=0.0813  delta=-0.0135
+  22/pi: real=0.0754  chaos=0.0944  synth=0.0789  delta=-0.0190
+  23/pi: real=0.0749  chaos=0.0918  synth=0.0789  delta=-0.0169
+  24/pi: real=0.0725  chaos=0.0903  synth=0.0807  delta=-0.0178
+  25/pi: real=0.0726  chaos=0.0926  synth=0.0788  delta=-0.0199
+  26/pi: real=0.0705  chaos=0.0891  synth=0.0785  delta=-0.0186
+  -> chaos_null_stellar_kinematic.jsonl
+  -> scramble_null_stellar_kinematic.jsonl
+  -> synthetic_null_stellar_kinematic.jsonl
+
+[stellar_rotation]  n=2527
+  4/pi: real=0.0973  chaos=0.0985  synth=0.0973  delta=-0.0012
+  5/pi: real=0.0970  chaos=0.0966  synth=0.1057  delta=+0.0004
+  6/pi: real=0.1049  chaos=0.0902  synth=0.0875  delta=+0.0146 ** above chaos **
+  7/pi: real=0.0934  chaos=0.1001  synth=0.1239  delta=-0.0067
+  8/pi: real=0.0851  chaos=0.1053  synth=0.0962  delta=-0.0202
+  9/pi: real=0.0942  chaos=0.0934  synth=0.0950  delta=+0.0008
+  10/pi: real=0.1009  chaos=0.0942  synth=0.1108  delta=+0.0067 ** above chaos **
+  11/pi: real=0.0977  chaos=0.1045  synth=0.1029  delta=-0.0067
+  12/pi: real=0.1005  chaos=0.0962  synth=0.0954  delta=+0.0044
+  13/pi: real=0.1045  chaos=0.1001  synth=0.0875  delta=+0.0044
+  14/pi: real=0.1076  chaos=0.1080  synth=0.1132  delta=-0.0004
+  15/pi: real=0.0954  chaos=0.0926  synth=0.0958  delta=+0.0028
+  16/pi: real=0.0843  chaos=0.1088  synth=0.0981  delta=-0.0245
+  17/pi: real=0.0962  chaos=0.0938  synth=0.0902  delta=+0.0024
+  18/pi: real=0.1065  chaos=0.0962  synth=0.0855  delta=+0.0103 ** above chaos **
+  19/pi: real=0.0898  chaos=0.1033  synth=0.0839  delta=-0.0135
+  20/pi: real=0.0922  chaos=0.0950  synth=0.1128  delta=-0.0028
+  21/pi: real=0.1033  chaos=0.1045  synth=0.1068  delta=-0.0012
+  22/pi: real=0.1041  chaos=0.1005  synth=0.1029  delta=+0.0036
+  23/pi: real=0.0989  chaos=0.0985  synth=0.0970  delta=+0.0004
+  24/pi: real=0.1049  chaos=0.1025  synth=0.0973  delta=+0.0024
+  25/pi: real=0.0934  chaos=0.1053  synth=0.0954  delta=-0.0119
+  26/pi: real=0.0918  chaos=0.1088  synth=0.0910  delta=-0.0170
+  -> chaos_null_stellar_rotation.jsonl
+  -> scramble_null_stellar_rotation.jsonl
+  -> synthetic_null_stellar_rotation.jsonl
+
+All null lakes written to: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\synthetic
+
+Next steps:
+  1. python engine/build_pinch_table.py
+
+[2026-07-05 11:50:29 UTC] STAGE COMPLETE: chaos in 2m 8s
+
+============================================================
+[2026-07-05 11:50:29 UTC] STAGE: PINCH
+Compute z-scores and cross-domain pinch table
+============================================================
+[harmonic_targets.json] Loaded 23 registers (N=4 to N=26), container=24, threshold=0.05
+
+============================================================
+  [MONITORING TIP] Open a new terminal and run:
+  python engine/sidecar.py
+  to view the live parallel crunching dashboard.
+============================================================
+
+Loading unified master: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\unified_master.jsonl
+  Loading records into memory. Please wait...
+    -> Parsed 381,681 records...
+    -> Parsed 763,637 records...
+    -> Parsed 1,141,100 records...
+    -> Parsed 1,521,231 records...
+    -> Parsed 1,940,435 records...
+    -> Parsed 2,472,119 records...
+    -> Parsed 3,009,703 records...
+
+  Finished loading 3,084,495 total records.
+  Compressing to 32-bit Numpy Arrays for Memory-Safe IPC...
+
+Building pinch table in PARALLEL mode...
+
+  Loading Chaos Nulls into memory...
+  Finished loading Chaos Nulls.
+  Loading Synthetic Nulls into memory...
+  Finished loading Synthetic Nulls.
+Total Combinations: 276 | Remaining: 276
+
+Saved: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\pinch_table_cross_domain.json
+
+===================================================================================================================
+                                              CROSS-DOMAIN PINCH TABLE                                             
+Moduli: 4/pi=1.2732  5/pi=1.5915  6/pi=1.9099  7/pi=2.2282  8/pi=2.5465  9/pi=2.8648  10/pi=3.1831  11/pi=3.5014  12/pi=3.8197  13/pi=4.1380  14/pi=4.4563  15/pi=4.7746  16/pi=5.0930  17/pi=5.4113  18/pi=5.7296  19/pi=6.0479  20/pi=6.3662  21/pi=6.6845  22/pi=7.0028  23/pi=7.3211  24/pi=7.6394  25/pi=7.9577  26/pi=8.2761
+                                  dist_lock (1=perfect) | Winner + best chaos_delta per pairing                                   
+===================================================================================================================
+Domain                            biology_backbone                        orbital                        stellar_kinematic                    stellar_rotation          
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+biology_backbone                         -                      (0.989,0.991,0.995) d+0.016         (0.464,0.510,0.546) d-0.107         (0.994,0.998,0.992) d+0.008     
+orbital                     (0.989,0.991,0.995) d+0.031                      -                      (0.465,0.510,0.546) d-0.107         (0.992,0.989,0.989) d+0.010     
+stellar_kinematic           (0.464,0.510,0.546) d+0.000         (0.465,0.510,0.546) d+0.001                      -                      (0.464,0.510,0.546) d+0.002     
+stellar_rotation            (0.994,0.998,0.992) d+0.027         (0.992,0.989,0.989) d+0.014         (0.464,0.510,0.546) d-0.108                      -                  
+
+--- WINNER PER PAIRING ---
+  biology_backbone x orbital: 6/pi  score=0.9952  chaos_delta=+0.0009
+  biology_backbone x stellar_kinematic: 26/pi  score=0.7439  chaos_delta=-0.1071
+  biology_backbone x stellar_rotation: 5/pi  score=0.9975  chaos_delta=+0.0007
+  orbital x stellar_kinematic: 26/pi  score=0.7421  chaos_delta=-0.1070
+  orbital x stellar_rotation: 15/pi  score=0.9934  chaos_delta=+0.0019
+  stellar_kinematic x stellar_rotation: 26/pi  score=0.7413  chaos_delta=-0.0001
+
+--- PER-DOMAIN DUAL Z-SCORES (Chaos | Synthetic) ---
+  Domain                           4/pi       5/pi       6/pi       7/pi       8/pi       9/pi      10/pi      11/pi      12/pi      13/pi      14/pi      15/pi      16/pi      17/pi      18/pi      19/pi      20/pi      21/pi      22/pi      23/pi      24/pi      25/pi      26/pi   Best   Interpretation
+  -------------------------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------  ------  --------------------
+     1  stellar_rotation                    2,527  computing...  ETA: estimating...
+     1  stellar_rotation          2,527 | -0.6|-0.1 -0.4|-0.1  0.8|1.4  -1.3|-4.4 -2.2|-2.3 -1.2|-0.4  0.4|0.1  -0.4|0.1  -0.1|0.5   0.9|1.1   0.9|-2.6 -0.5|-0.1 -2.8|-2.2 -0.5|-0.2  1.1|1.5  -1.0|-1.0 -1.2|-1.4  0.2|0.8   0.8|1.2  -0.0|0.2   0.1|1.2  -1.5|-0.6 -1.2|-0.9  18/pi   noise floor
+     2  orbital                            13,514  computing...  ETA: 0s
+     2  orbital                  13,514 | -3.8|-3.8  7.1|7.5  -3.7|-3.9  1.6|2.0   1.6|2.3  -3.4|-3.1 19.9|19.6 23.7|19.6 -14.0|-13.0 -9.6|-8.9 -2.5|-2.2  7.1|6.1   5.3|4.7  -9.9|-10.9 -9.9|-15.5 -13.3|-12.6 -2.3|-2.3 -16.8|-15.8 27.9|33.0 -10.0|-9.8 -9.3|-11.6 -4.4|-5.1 -11.9|-16.2  22/pi   STRONG signal
+     3  biology_backbone                1,259,889  computing...  ETA: 1s
+     3  biology_backbone       1,259,889 | -5.9|32.0 -3.7|35.7 -5.7|31.6 -14.5|25.2  2.9|39.8 -0.3|40.3 -17.8|17.8 -28.0|12.9 22.5|59.6  9.0|38.9  5.3|40.3 33.6|63.6 62.6|-226.6 -37.1|-9.6 -6.2|21.7 46.5|69.9 -44.6|-287.5 15.6|43.6 -5.0|25.9 -30.4|-6.3 40.4|-214.2 58.8|82.2 -22.2|-2.4  16/pi   STRONG signal
+     4  stellar_kinematic               1,808,145  computing...  ETA: 27s
+     4  stellar_kinematic      1,808,145 | -15.7|54.2  0.4|54.4 -11.3|51.3 -72.3|-19.9 -26.5|37.0 -78.8|-14.8 -86.8|-29.4 -61.5|6.9  79.1|155.1 -38.0|20.3 -61.5|-7.3 100.2|171.0 88.0|168.3 -11.5|50.6 -39.8|25.5 -46.1|7.6  -63.0|-1.4 -63.4|-21.3 -88.3|-17.6 -91.0|-20.0 -79.4|-44.9 -90.7|-32.5 -87.6|-39.2  15/pi   STRONG signal
+
+  Z-score stage complete: 3m 20s total  | avg 50.03s per domain  | 200.1s wall time
+
+  [z_scores_master.json written -> C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\unified\z_scores_master.json]
+
+[2026-07-05 11:54:38 UTC] STAGE COMPLETE: pinch in 4m 9s
+
+============================================================
+[2026-07-05 11:54:38 UTC] STAGE: FIGURES
+Run report plugins and generate analysis figures
+============================================================
+
+[2026-07-05 11:54:38 UTC] FIGURES: Auto-discovering report plugins
+  Reports directory: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\reports
+  Found 19 plugin(s):
+    - report_01_domain_Ramachandran_scatters.py
+    - report_02_bridge_map.py
+    - report_02_universal_histograms.py
+    - report_03_power_analysis.py
+    - report_04_batch_stability.py
+    - report_05_wrongbox_delta.py
+    - report_06_register_spectrum.py
+    - report_08_subnuclear_dual.py
+    - report_09_floor_smear.py
+    - report_10_kinematic_principle.py
+    - report_11_seismic_sovereign.py
+    - report_12_pinch_heatmap.py
+    - report_13_null_confidence.py
+    - report_14_register_taxonomy.py
+    - report_16_artifact_falsification.py
+    - report_17_cross_scale_bridge.py
+    - report_18_manifold_embedding.py
+    - report_19_same_object_phase_scatter.py
+    - report_20_global_ledger.py
+
+[2026-07-05 11:54:38 UTC] Loading pipeline artifacts...
+  Pinch table:  4 domain rows
+  Sweep results:6 domain entries
+  Z-scores:     4 domains x 23 registers
+  Harmonics:    4/pi ... 26/pi
+  Manifest: loaded existing (5 domains) -- domain_manifest.json
+
+  Output directory: C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438
+
+[2026-07-05 11:54:38 UTC] Running 19 report plugin(s)...
+
+  [report_01_domain_Ramachandran_scatters]
+    -> Plotting Ramachandran Principle Scatters...
+       [PLOT] biology_backbone_full (n=0) | Peak Z: 0.00 at N/A
+       [WARN] Missing promoted lake for subnuclear_mass
+       [PLOT] orbital_ttv (n=0) | Peak Z: 0.00 at N/A
+    [OK] 2 file(s) in 21.1s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\scatter_biology_backbone_full.png
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\scatter_orbital_ttv.png
+  [report_02_bridge_map]
+    -> Rendering Force-Directed Harmonic Bridge Map...
+    [OK] 0 files in 0.6s (plugin ran, nothing saved)
+  [report_02_universal_histograms]
+    [OK] 0 files in 13.0s (plugin ran, nothing saved)
+  [report_03_power_analysis]
+    -> Calculating Statistical Power & Effect Sizes...
+       [WARN] No valid data found for power analysis.
+    [OK] 0 files in 0.0s (plugin ran, nothing saved)
+  [report_04_batch_stability]
+    -> Initiating 24-Cell Batch Stability Sub-Sampler...
+    [OK] 0 files in 0.0s (plugin ran, nothing saved)
+  [report_05_wrongbox_delta]
+    -> Plotting Wrongbox Deltas & Prediction Audits...
+       [AUDIT] STELLAR_ROTATION: Plotting Delta...
+       [AUDIT] STELLAR_KINEMATIC: Plotting Delta...
+       [AUDIT] BIOLOGY_BACKBONE: Plotting Delta...
+    [OK] 3 file(s) in 0.6s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\wrongbox_delta_stellar_rotation.png
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\wrongbox_delta_stellar_kinematic.png
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\wrongbox_delta_biology_backbone.png
+  [report_06_register_spectrum]
+    -> Plotting Register Spectrum (Rainbow Map)...
+       [WARN] No peaks found above Z=3.0.
+    [OK] 0 files in 0.0s (plugin ran, nothing saved)
+  [report_08_subnuclear_dual]
+    -> Plotting Subnuclear Dual-Peak Resonance Map...
+        [DATA] Streaming unified master for subnuclear_mass scalars...
+       [WARN] No records found for 'subnuclear_mass' in unified_master.
+    [OK] 0 files in 13.0s (plugin ran, nothing saved)
+  [report_09_floor_smear]
+    -> Investigating the 4/pi Floor Smear...
+        [DATA] Streaming unified master for scalar_klc values...
+    [OK] 0 files in 13.1s (plugin ran, nothing saved)
+  [report_10_kinematic_principle]
+    -> Plotting Kinematic Principle Panels (The Mic-Drop)...
+       [WARN] Domain 'stellar_colour' not found in z_scores for Stellar Proof.
+       [WARN] Domain 'stellar_luminosity' not found in z_scores for Stellar Proof.
+       [WARN] Domain 'stellar' not found in z_scores for Stellar Proof.
+       [WARN] Domain 'orbital_radius' not found in z_scores for Orbital Proof.
+    [OK] 2 file(s) in 0.5s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\principle_stellar_proof.png
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\principle_orbital_proof.png
+  [report_11_seismic_sovereign]
+    -> Plotting 4-Panel Seismic Sovereign Audit...
+        [DATA] Streaming unified master for Sovereign Seismic lakes...
+       [SKIP] Sovereign seismic domains not found in unified master (likely disabled).
+    [OK] 0 files in 13.4s (plugin ran, nothing saved)
+  [report_12_pinch_heatmap]
+    -> Rendering Cross-Domain Distance Matrix Heatmap...
+    [OK] 1 file(s) in 0.6s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\distance_matrix_heatmap.png
+  [report_13_null_confidence]
+    -> Plotting Null Confidence & Statistical Power...
+       [SKIP] No explicit Null/Control domains found for confidence plotting.
+    [OK] 0 files in 3.9s (plugin ran, nothing saved)
+  [report_14_register_taxonomy]
+    -> Rendering Register Taxonomy Matrix...
+    [OK] 1 file(s) in 0.2s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\register_taxonomy_matrix.png
+  [report_16_artifact_falsification]
+    -> Plotting Artifact Falsification (Chaos vs Synthetic)...
+    [OK] 1 file(s) in 0.2s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\artifact_falsification.png
+  [report_17_cross_scale_bridge]
+    -> Rendering Cross-Scale Bridge Map (35 Orders of Magnitude)...
+    [OK] 1 file(s) in 0.4s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\cross_scale_bridge.png
+  [report_18_manifold_embedding]
+    -> Computing 46-Dimensional Topological Embedding (t-SNE)...
+       [SKIP] Not enough valid high-dimensional data for a manifold embedding.
+    [OK] 0 files in 2.2s (plugin ran, nothing saved)
+  [report_19_same_object_phase_scatter]
+    -> Plotting 2D Same-Object Phase Space Scatters...
+       [SKIP] No '__same_object__' linkages found in volumes.json.
+    [OK] 0 files in 0.0s (plugin ran, nothing saved)
+  [report_20_global_ledger]
+    -> Rendering The Global Ledger Master Infographic...
+    [OK] 1 file(s) in 0.4s
+         C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\global_ledger_master.png
+
+[2026-07-05 11:56:01 UTC] FIGURES COMPLETE
+  Plugins:  19 OK  |  0 FAILED  |  0 SKIPPED
+  Files:    12 generated
+  Patched:  0 plugin(s) upgraded to z_scores_master.json
+  Runtime:  83.2s
+  Index:    C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438\figures_index.json
+  Output:   C:\Users\timot\Downloads\Science\src\The_Sister_Papers\lakes\figures\output\run_20260705_115438
+
+[2026-07-05 11:56:02 UTC] STAGE COMPLETE: figures in 1m 23s
+
+============================================================
+[2026-07-05 11:56:02 UTC] PIPELINE COMPLETE
+  Total runtime: 8m 53s
+  Log file:      lakes\logs\run_20260705_114658.log
+
+  Stage summary:
+    [OK]   scalarize    34s
+    [OK]   unify        34s
+    [OK]   chaos        2m 8s
+    [OK]   pinch        4m 9s
+    [OK]   figures      1m 23s
+
+  unified_master MD5: f2c84c11de5b6c7b71d282bdd3d60ee7
+  Checksum file:      lakes\unified\unified_master.jsonl.md5
+
+  Engine fingerprint: 7ec3f687e97dbc53157f487b8d3c8028c78cb29cd07bf67abd2b4a5260366c03
+                      d5d1612f9caf57d6b0c21459cc7e1a582bf8bbb130a32607dec51771d0db3734
+                      e3979eb5bdb6dcea5694dbc4ed49d3209358f0a9931bd88a9d79849a523d4a82
+============================================================

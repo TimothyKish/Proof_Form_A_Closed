@@ -1,0 +1,18 @@
+{
+  "fermi_velocity_ms": {
+    "type": "number",
+    "description": "Fermi velocity of the elemental conductor in m/s (Source: Ashcroft & Mermin)"
+  },
+  "vertex_class": {
+    "type": "string",
+    "description": "The geometric ground state classification (2, 4, 8, or EXCLUDE)"
+  },
+  "transition_energy_eV": {
+    "type": "number",
+    "description": "Raw transition energy in electron-volts from NIST ASD"
+  },
+  "transition_frequency_Hz": {
+    "type": "number",
+    "description": "Transition energy converted to Hz via E=hv"
+  }
+}

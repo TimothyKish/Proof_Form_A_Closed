@@ -1,0 +1,76 @@
+{
+  "domains": [
+    {
+      "domain": "biology_backbone",
+      "n": 1260086,
+      "nonzero": 1259889,
+      "mean": 2.596319,
+      "std": 0.459541,
+      "min": 0.058549,
+      "max": 3.193457
+    },
+    {
+      "domain": "galactic",
+      "n": 1843110,
+      "nonzero": 1843110,
+      "mean": 3.253137,
+      "std": 0.26281,
+      "min": 2.606946,
+      "max": 4.148774
+    },
+    {
+      "domain": "geomagnetic",
+      "n": 195,
+      "nonzero": 0,
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "domain": "nuclear_binding",
+      "n": 43,
+      "nonzero": 43,
+      "mean": 1.301266,
+      "std": 0.18367,
+      "min": 0.459275,
+      "max": 1.401449
+    },
+    {
+      "domain": "orbital",
+      "n": 13521,
+      "nonzero": 13514,
+      "mean": 3.878427,
+      "std": 1.294076,
+      "min": 0.053337,
+      "max": 6.912795
+    },
+    {
+      "domain": "quantum_kinematic",
+      "n": 21,
+      "nonzero": 0,
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    {
+      "domain": "stellar_kinematic",
+      "n": 1808145,
+      "nonzero": 1808145,
+      "mean": 1.092971,
+      "std": 1.16821,
+      "min": -0.193529,
+      "max": 4.444616
+    },
+    {
+      "domain": "stellar_rotation",
+      "n": 2527,
+      "nonzero": 2527,
+      "mean": 3.543962,
+      "std": 1.115289,
+      "min": 0.536768,
+      "max": 5.759102
+    }
+  ]
+}
