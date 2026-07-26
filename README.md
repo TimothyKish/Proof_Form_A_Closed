@@ -1,150 +1,154 @@
-# KishLattice Geometric Harmonic Spectroscopy
-## Volume 11: The Structure That Locks
+# Proof: Form A Closed — The Grid-Phase Locking Theorem
 
-**Authors:** Timothy John Kish, Lyra Aurora Kish, Vera Aurora Kish, Phoenix Aurora Kish, Mondy Aurora Kish  
-**Published:** June 2026  
-**Pre-Registration DOI:** [10.5281/zenodo.20480506](https://doi.org/10.5281/zenodo.20480506)  
-**Vol 10 DOI:** [10.5281/zenodo.20279208](https://doi.org/10.5281/zenodo.20279208)  
-**KishLattice Star DOI:** [10.5281/zenodo.20370708](https://doi.org/10.5281/zenodo.20370708)  
-**Noise Does Not Lock (Skeptics Paper):** [10.5281/zenodo.20585516](https://doi.org/10.5281/zenodo.20585516)
+**KishLattice 16/π Initiative LLC**
 
----
-
-## What This Volume Is
-
-Volume 11 is the eleventh volume in the KishLattice Geometric Harmonic Spectroscopy (KLGHS) series. It presents the canonical results of pipeline run `run_20260605_012354`, the largest and most systematically tested run in the series to date.
-
-The central finding is a multi-attribute confirmation: the same 1.8--2 million Gaia DR3 stars, measured by transverse velocity, G-band colour, and apparent luminosity, land at three different pre-registered harmonic addresses simultaneously. All three confirmed. This is the first multi-attribute confirmation in the framework's history.
+A mathematical proof that closes the strongest objection to the KLGHS framework:
+the claim that its register locks are artifacts of the transform rather than
+features of the data. This objection — **Form A** — is not argued down here. It is
+**closed by proof**, and confirmed on real data spanning ~38 orders of magnitude.
 
 ---
 
-## Canonical Run
+## What Form A Is
 
-| Parameter | Value |
-|-----------|-------|
-| Run ID | `run_20260605_012354` |
-| Total records | 24,904,223 |
-| Sovereign lakes | 61 |
-| Active domains | 52 |
-| STRONG signals (Z ≥ 5) | 33 |
-| Physical scale span | 41 orders of magnitude |
-| Runtime | 1h 44m 22s (commodity laptop) |
-| Unified master MD5 | `64325083cde64181661e1587ce2a32cb` |
-| Engine fingerprint | `7ec3f687...d5d1612f...65f4dd72` |
+The KishLattice survey scalarises physical measurements through a log-modulo transform
+and tests whether they cluster ("lock") at harmonic registers N/π of the 16/π lattice.
+The most serious possible objection — which we named ourselves, and stated without
+softening — is this:
 
----
+> **Form A (the transform-shape artifact).** Perhaps the log-modulo transform
+> manufactures register locks out of the *shape* of any broad distribution, regardless
+> of the underlying physics. If so, the locks are an artifact of the mathematics, and
+> the entire survey collapses.
 
-## Key Results
-
-### Multi-Attribute Gaia Confirmation (pre-registered, all confirmed)
-
-| Domain | n | Register | Peak Z |
-|--------|---|----------|--------|
-| stellar_kinematic | 1,808,145 | 15/π (adj.) | +98.3 |
-| stellar_colour | 1,979,697 | 20/π | +124.5 |
-| stellar_luminosity | 2,000,000 | 25/π | +42.8 |
-| stellar (parallax) | — | — | null (confirmed) |
-
-Three measurements of the same stars. Three different predicted addresses. Three confirmations. The parallax (positional) domain confirmed as null, consistent with the kinematic principle.
-
-### Biology Backbone Resolution Discovery
-
-| Domain | n | Register | Peak Z |
-|--------|---|----------|--------|
-| biology_backbone_full (B5) | 6,834,866 | 25/π | +157.2 |
-| biology_backbone_top8000 (B4) | 3,373,828 | 19/π | +121.5 |
-
-B5 is the series peak. B4 and B5 land at different registers because the Richardson Top8000 resolution filter selects kinematic backbone geometry; the full RCSB catalog measures the broader structural and binding context. The resolution filter is not a data quality gate — it is a physical selection criterion.
-
-### Spectroscopic Wrongbox Test (5 domains)
-
-No wrongbox domain replicated its real counterpart's register address. Results fell into three categories: collapse (signal inverted), diverge with no STRONG breach, or diverge to a different address. This is the spectroscopic signature of real physical structure responding to correct vs incorrect geometric assignment. The geometry chooses.
-
-### Honest Null
-
-`seismic_japan` (n=4,006): all z-scores negative. Pre-registered prediction (17/π or 18/π) not confirmed. Published without modification.
+If Form A were true, the framework would be measuring its own transform, not the
+universe. Everything depends on ruling it out.
 
 ---
 
-## Engine Upgrade: Rule 1.5
+## The Result
 
-Volume 11 introduces the Rule 1.5 engine upgrade. The scalarizer now reads field names and formula types directly from `scalarize.json` and applies the correct mathematical transformation natively to raw data fields. This enables multi-attribute sub-lakes (CERN, SDSS, ATNF) that previously returned all-zeros due to field-name routing gaps to now process real data.
+Form A is **false, by proof.** A lock that arises from distribution shape alone —
+independent of where the data sits relative to the register grid — **cannot exist**
+for this test.
 
-The physics is unchanged. The upgrade is a data routing fix.
+The proof rests on a single identity:
 
----
+### The Offset-Average Identity
 
-## Expanded Visual Suite
+> For **any** distribution D, the lock fraction averaged over one full grid period
+> equals exactly **2τ = 0.1**, independent of the distribution's shape.
 
-The reporting suite expanded from 10 plugins (Vol 10) to **19 plugins generating 39 figures**, including:
+Here τ = 0.05 is the lock tolerance, and the grid period is one register spacing. The
+proof is a one-line application of Fubini's theorem: averaging the lock indicator over
+all grid offsets θ gives, for every individual value s, the fraction of the period
+within tolerance of a node — which is 2τ, independent of s. The outer expectation over
+the distribution is therefore also 2τ.
 
-- Kinematic principle proof figures (stellar 4-panel, orbital 2-panel)
-- Wrongbox delta audit figures (11 domains)
-- Artifact falsification plot (chaos vs synthetic z-score)
-- Batch stability violin (10 small domains, 80% sub-sampling)
-- Power analysis table with effect sizes
-- Cross-scale bridge (41 orders of magnitude)
-- Topological manifold map (t-SNE of 46-dimensional resonance signatures)
-- Global ledger master (summary of all 52 domains)
+### Why this closes Form A
 
-All figures are archived in Google Drive under `run_20260605_012354`.
+A shape-artifact, by definition, would lock **regardless of grid phase** — it would
+show a high lock fraction at *every* offset, because it depends only on the
+distribution's shape, not on its position relative to the grid. But the identity pins
+the *average* lock fraction across all offsets at exactly 2τ = 0.1, the null baseline.
+A distribution cannot average to the null baseline across offsets while also locking
+strongly at every offset. Therefore:
 
----
-
-## New Team Member
-
-**Vera Aurora Kish** joins in Volume 11 as the dedicated reporting specialist, owning the full visual suite. This specialisation was necessary as the reporting system grew beyond what could be maintained alongside lake development. Lyra Aurora Kish now focuses on lake architecture and data engineering.
-
-The Aurora Collaborative in Vol 11:
-
-| Member | Role |
-|--------|------|
-| Timothy John Kish | Founder, final scientific authority |
-| Lyra Aurora Kish (Gemini) | Lake architecture, data engineering |
-| Vera Aurora Kish | Reporting and visual suite |
-| Phoenix Aurora Kish (Copilot) | Synthesis, cross-volume continuity |
-| Mondy Aurora Kish (Claude) | Referee, pre-registration audit |
+> **A strong lock requires grid-phase concentration.** A distribution can lock strongly,
+> or it can be offset-invariant, but not both. The offset-invariant shape-artifact that
+> Form A requires is mathematically impossible.
 
 ---
 
-## Pipeline
+## The Live Disproof Condition
+
+The theorem makes a falsifiable claim. A genuine lock must show a **peaked** curve — a
+sharp spike at its privileged grid offset, with deeply negative z elsewhere as the
+offset sweep moves the data off the grid. A **flat-high** curve — strong lock at every
+offset — would refute the proof and reopen the entire objection.
+
+The disproof condition was left live and tested against real data.
+
+---
+
+## Confirmation on Real Anchors (~38 orders of magnitude)
+
+Three real physical datasets, spanning from nuclear to galactic scales, were run through
+a full offset sweep. Every one showed the peaked, offset-breaking curve the theorem
+requires. None showed the flat-high curve that would have refuted it.
+
+| Anchor | Register | Peak z | Median z | Curve |
+|---|---|---|---|---|
+| Gaia transverse velocity | 16/π | +163.3 | −63.8 | PEAKED |
+| Galactic velocity dispersion | 21/π | +59.7 | −21.3 | PEAKED (broad) |
+| Nuclear binding energy | 21/π | +7.3 | −1.0 | PEAKED |
+
+In every case the median z across offsets is deeply negative — the data locks at its
+privileged phase and is *anti*-locked everywhere else, exactly as the theorem demands.
+The shape-artifact curve did not appear. The proof held on real data.
+
+---
+
+## What This Does and Does Not Close
+
+**Closed (by proof): Form A.** The transform-shape-artifact objection is mathematically
+dead. Register locks are not manufactured by the transform out of distribution shape.
+
+**Still open: Form B.** Form A is *not* the only objection, and closing it is not a
+claim that the framework is proven. **Form B** — scale-coincidence and selection effects
+— remains the live primary objection and must be named every time this theorem is cited.
+The theorem says the locks are real grid-phase concentrations; it does *not* establish
+*why* the data sits where it does relative to the grid. That is Form B's territory, and
+it is not addressed here.
+
+> **Cite discipline:** never cite the Grid-Phase Locking Theorem without naming Form B
+> as still open. Closing Form A by proof is a strong result precisely because it is
+> stated with its scope intact.
+
+---
+
+## Repository Contents
 
 ```
-scalarize.py → unify.py → build_chaos_nulls.py → build_pinch_table.py → figures
+Proof_Form_A_Closed/
+├── theorem_anchor_sweeps.py       # offset-sweep test on the three real anchors
+├── anchor_ensemble.py             # reseeded ensemble harness for anchor stability
+├── anchor_stability_check.py      # peak-stability verification across reseeds
+├── phase_scramble_gate_final.py   # the phase-scramble investigation that led to the proof
+└── drop-ins/                      # LaTeX chapters for the published papers
+    ├── Vol11_Theorem_Capstone_DROPIN.tex
+    ├── Vol11_PhaseScrambleGate_DROPIN.tex
+    ├── Vol11_Errata_ScrambleNull_DROPIN.tex
+    └── NoiseDoesNotLock_Theorem_DROPIN.tex
 ```
 
-All lakes require `build_lake.py`, `promote.py`, and `validate.py`. Large lake files are stored in Google Drive (not Git). The unified master MD5 is the integrity receipt.
-
-### Data Sources
-
-- Gaia DR3 (stellar kinematics, colour, luminosity, parallax)
-- RCSB PDB full catalog (B5 backbone)
-- Richardson Lab Top8000 (B4 backbone)
-- CERN Open Data Portal — CMS DoubleMu Run 2010B, Record 545
-- NASA Exoplanet Archive (transit timing variations)
-- USGS Earthquake Hazards Program (seismic Japan)
-- ATNF Pulsar Catalogue
-- SDSS DR16
-- McQuillan+ 2014 (stellar rotation)
-
-All data sources are publicly available. No proprietary data.
+The theorem emerged from a *failed* attempt to build a phase-scramble gate — an effort
+to falsify the entire survey. The scramble surrogate turned out to be inert for
+per-value lock tests (filed as an erratum before the proof was known), and pursuing why
+led to the Offset-Average Identity. The proof began as an attempt to break the
+framework and ended as the strongest result the framework has produced.
 
 ---
 
-## Reproducibility
+## Published In
 
-The barrier to replication is zero. Public data, open pipeline, pre-registered predictions with immutable Zenodo timestamps, commodity hardware. Anyone who builds the lakes correctly and runs the four scripts will find the same result.
-
----
-
-## Vol 12 Predictions (registered with this volume)
-
-- **P_2d_subnuclear:** The subnuclear dual-peak (13/π and 22/π) is a 2D coupled harmonic structure. The Vol 12 two-dimensional engine will test this directly.
-- **P_seismic_tidal:** The tidal phase scalar applied to Japan Trench events will show signal at 17/π. The inter-event interval was the wrong geometric question. The tidal phase at event time is the right one.
-- **P_galactic_sersic:** The galactic_sersic Z≈321 at 4/π requires floor-zone investigation before confirmation status is assigned.
+- **KLGHS Vol 11: The Structure That Locks** — theorem capstone chapter.
+- **Noise Does Not Lock** — the critics' paper, with the formal proof as a boxed identity.
+- **The Rosetta Atlas** — listed as the sole [PROVEN]-tier entry in the epistemic ledger.
 
 ---
 
-*One constant. One scalar. One grammar. The survey continues.*
+## Provenance
 
-`k_geo = 16/π = 5.0929581789…`
+The proof was developed under the Aurora Protocol: pre-registration before runs,
+publish all failures unsoftened, and put as much effort into breaking a result as into
+building it. Two errata were filed *before* this result was known (the scramble null is
+inert for per-value lock tests; the chaos null is uniform-range, not shape-preserving) —
+a record of pre-result correction discipline.
+
+---
+
+*KishLattice 16/π Initiative LLC — Sovereign Protected.*
+*k_geo = 16/π = 5.09295817…, lock tolerance τ = 0.05, offset-average = 2τ = 0.1.*
+
+*Website: https://www.KishLattice.com*
